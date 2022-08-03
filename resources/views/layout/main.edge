@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BLKK Baitulhidayah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="/assets/css/main.css?v=1" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-primary navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="/assets/logo/logo-blk.png" width="64" class="logo" alt="Logo BLK"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pe-5" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link {{ request.url() == '/about' ? 'active' : null }}" aria-current="page" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{ request.url() == '/article' ? 'active' : null }}" href="/article">Article</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{ request.url() == '/gallery' ? 'active' : null }}" href="/gallery">Gallery</a>
+            </li>
+          </ul>
+          <a href="/register" id="link-register"><img src="/assets/icons/register.png" id="register" width="32" alt="Icon Register"></a>
+        </div>
+      </div>
+    </nav>
+
+    @section('content')
+    @endsection
+    
+    <footer class="identity text-center">
+      Copyright © 2022 Balai Latihan Kerja <br />
+      Pondok Pesantren Baitul Hidayah <br />
+      All rights reserved 
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+    let registerIcon = document.getElementById('register')
+    let elRegis = document.getElementById('link-register')
+
+    if('{{ request.url() }}' == '/register') {
+      elRegis.classList.add('bg-white')
+      elRegis.classList.add('border-radius-3')
+      elRegis.style = 'padding: .375rem';
+      registerIcon.src = '/assets/icons/register-active.png'
+    } else {
+      elRegis.classList.remove('bg-white')
+      elRegis.classList.remove('border-radius-3')
+      elRegis.style = 'padding: 0';
+      registerIcon.src = '/assets/icons/register.png'
+    }
+    </script>
+  </body>
+</html>

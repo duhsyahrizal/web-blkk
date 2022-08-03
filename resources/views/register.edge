@@ -1,0 +1,87 @@
+@layout('layout/main')
+@section('content')
+<section class="register main-page">
+  <img src="/assets/images/register.png" style="position: absolute; left: -100px; top: calc(25% + 2px); width: calc(76% - 48px); z-index: 10;" alt="">
+  <h1 class="hero-title text-primary">REGISTRATION</h1>
+  <div class="subheading text-primary">BALAI LATIHAN KERJA Pondok Pesantren Baitul Hidayah</div>
+  <h2 style="position: absolute; right: calc(18% + 56px); top: 86%; font-weight: 700; font-style: italic;" class="text-primary">Yuk Buruan <br /> daftar Kuota <br />Terbatas!!!</h2>
+</section>
+
+<section class="register-page">
+  <div class="block-left"></div>
+  <div class="block-right"></div>
+  <h1 class="title">Form Pendaftaran</h1>
+  <h3 class="subheading">Angkatan Ke-5</h3>
+  <div class="container">
+    <form action="/register" method="post" style="padding: 0 240px">
+      <div class="row justify-content-center g-2">
+        <div class="col-4">
+          <label for="name" class="col-form-label">Nama</label>
+        </div>
+        <div class="col-1">
+          <b>:</b>
+        </div>
+        <div class="col-7">
+          <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="col-4">
+          <label for="nik" class="col-form-label">Nik</label>
+        </div>
+        <div class="col-1">
+          <b>:</b>
+        </div>
+        <div class="col-7">
+          <input type="text" name="nik" class="form-control" required>
+        </div>
+        <div class="col-4">
+          <label for="ttl" class="col-form-label">Tempat Lahir</label>
+        </div>
+        <div class="col-1">
+          <b>:</b>
+        </div>
+        <div class="col-7">
+          <input type="text" name="ttl" class="form-control" required>
+        </div>
+        <div class="col-4">
+          <label for="birthday" class="col-form-label">Tanggal Lahir</label>
+        </div>
+        <div class="col-1">
+          <b>:</b>
+        </div>
+        <div class="col-7">
+          <input type="text" name="birthday" class="form-control" required>
+        </div>
+        <div class="col-4">
+          <label for="address" class="col-form-label">Alamat</label>
+        </div>
+        <div class="col-1">
+          <b>:</b>
+        </div>
+        <div class="col-7">
+          <input type="text" name="address" class="form-control" required>
+        </div>
+        <div class="col-4">
+          <label for="hobby" class="col-form-label">Hobi</label>
+        </div>
+        <div class="col-1">
+          <b>:</b>
+        </div>
+        <div class="col-7">
+          <input type="text" name="hobby" class="form-control" required>
+        </div>
+        <div class="col-4">
+          <label for="goals" class="col-form-label">Cita-Cita</label>
+        </div>
+        <div class="col-1">
+          <b>:</b>
+        </div>
+        <div class="col-7">
+          <input type="text" name="goals" class="form-control" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary-blkk mt-3 float-end">submit</button>
+    </form>
+  </div>
+</section>
+
+@endsection
