@@ -25,3 +25,5 @@ Route.get('/article', 'FrontendController.article')
 Route.get('/gallery', 'FrontendController.gallery')
 
 Route.get('/register', 'FrontendController.register')
+
+Route.post('/register', 'FrontendController.postRegister')
