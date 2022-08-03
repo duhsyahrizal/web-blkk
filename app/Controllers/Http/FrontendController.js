@@ -4,33 +4,37 @@ const Register = use('App/Models/Register')
 class FrontendController {
   async index({ response, view }) 
   {
-    var data = 'test'
+    var page = 'Home'
 
-    return view.render('home', {data : data})
+    return view.render('home', {page : page})
   }
 
   async about({ view }) 
   {
+    var page = 'About'
     
-    return view.render('about-us')
+    return view.render('about-us', {page : page})
   }
 
   async article({ view }) 
   {
+    var page = 'Article'
 
-    return view.render('article')
+    return view.render('article', {page : page})
   }
 
   async gallery({ view }) 
   {
+    var page = 'Gallery'
 
-    return view.render('gallery')
+    return view.render('gallery', {page : page})
   }
 
   async register({ view }) 
   {
+    var page = 'Register'
 
-    return view.render('register')
+    return view.render('register', {page : page})
   }
 
   async postRegister({ request, response })
